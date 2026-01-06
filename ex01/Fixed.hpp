@@ -1,5 +1,5 @@
-#ifndef EX00_FIXED_HPP_
-#define EX00_FIXED_HPP_
+#ifndef EX01_FIXED_HPP_
+#define EX01_FIXED_HPP_
 
 #include <iostream>
 
@@ -25,4 +25,4 @@ public:
 // Utilities
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
-#endif // EX00_FIXED_HPP_
+#endif // EX01_FIXED_HPP_

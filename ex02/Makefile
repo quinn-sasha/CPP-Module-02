@@ -24,7 +24,7 @@ fclean: clean
 	$(RM) $(TARGET)
 
 test_memory_leak: $(TARGET)
-	valgrind --leak-check=full --show-leak-kinds=reachable --track-origins=yes ./$(TARGET) "WARNING"
+	valgrind --leak-check=full --show-leak-kinds=reachable --track-origins=yes ./$(TARGET)
 
 re: fclean all
 

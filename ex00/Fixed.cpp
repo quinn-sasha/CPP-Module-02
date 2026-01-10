@@ -7,10 +7,8 @@ Fixed::Fixed() : value(0) {
   std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed& rhs) {
+Fixed::Fixed(const Fixed& rhs) : value(rhs.getRawBits()) {
   std::cout << "Copy constructor called" << std::endl;
-
-  value = rhs.getRawBits();
 }
 
 Fixed& Fixed::operator=(const Fixed& rhs) {

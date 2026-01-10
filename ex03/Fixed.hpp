@@ -5,12 +5,12 @@
 
 class Fixed {
   int value;
-  static const int num_fractional_bits; // Always 8
+  static const int num_fractional_bits;  // Always 8
 
-public:
+ public:
   Fixed();
-  Fixed(const int& rhs);
-  Fixed(const float& rhs);
+  explicit Fixed(const int& rhs);
+  explicit Fixed(const float& rhs);
   Fixed(const Fixed& rhs);
   Fixed& operator=(const Fixed& rhs);
   ~Fixed();
@@ -47,4 +47,4 @@ public:
 // Utilities
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
-#endif // EX03_FIXED_HPP_
+#endif  // EX03_FIXED_HPP_

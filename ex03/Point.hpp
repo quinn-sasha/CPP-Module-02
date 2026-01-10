@@ -7,7 +7,7 @@ class Point {
   const Fixed _x;
   const Fixed _y;
 
-public:
+ public:
   Point();
   Point(const float x, const float y);
   Point(const Fixed& x, const Fixed& y);
@@ -22,4 +22,4 @@ public:
 // Return true if point is inside the triangle abc, false otherwise
 bool bsp(Point const a, Point const b, Point const c, Point const point);
 
-#endif // EX03_POINT_HPP_
+#endif  // EX03_POINT_HPP_

@@ -1,6 +1,6 @@
-#include "Fixed.hpp"
-#include <cmath>
 #include <iostream>
+#include <cmath>
+#include "Fixed.hpp"
 
 const int Fixed::num_fractional_bits = 8;
 
@@ -53,14 +53,14 @@ Fixed Fixed::operator-(const Fixed& rhs) const {
 
 Fixed Fixed::operator*(const Fixed& rhs) const {
   Fixed result;
-  long long new_value = value * rhs.value;
+  int64_t new_value = value * rhs.value;
   result.setRawBits(static_cast<int>(new_value >> num_fractional_bits));
   return result;
 }
 
 Fixed Fixed::operator/(const Fixed& rhs) const {
   Fixed result;
-  long long temp = static_cast<long long>(value) << num_fractional_bits;
+  int64_t temp = static_cast<int64_t>(value) << num_fractional_bits;
   result.setRawBits(static_cast<int>(temp / rhs.value));
   return result;
 }

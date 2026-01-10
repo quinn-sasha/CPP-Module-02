@@ -1,6 +1,6 @@
-#include "Fixed.hpp"
-#include <cassert>
 #include <iostream>
+#include <cassert>
+#include "Fixed.hpp"
 
 void test_42_requirements() {
   Fixed a;

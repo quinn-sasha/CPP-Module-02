@@ -20,10 +20,8 @@ Fixed::Fixed(const float& rhs) {
   value = static_cast<int>(roundf(rhs * (1 << num_fractional_bits)));
 }
 
-Fixed::Fixed(const Fixed& rhs) {
+Fixed::Fixed(const Fixed& rhs) : value(rhs.value) {
   std::cout << "Copy constructor called" << std::endl;
-
-  value = rhs.value;
 }
 
 Fixed& Fixed::operator=(const Fixed& rhs) {

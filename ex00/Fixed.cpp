@@ -1,5 +1,5 @@
-#include "Fixed.hpp"
 #include <iostream>
+#include "Fixed.hpp"
 
 const int Fixed::num_fractional_bits = 8;
 

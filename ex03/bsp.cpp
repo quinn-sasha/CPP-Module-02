@@ -12,7 +12,7 @@ Fixed cross_product(const Point& a, const Point& b, const Point& c) {
   Point ac(c.x() - a.x(), c.y() - a.y());
   return ab.x() * ac.y() - ab.y() * ac.x();
 }
-} // namespace
+}  // namespace
 
 // Return true if point is inside the triangle abc, false otherwise
 bool bsp(Point const a, Point const b, Point const c, Point const point) {
@@ -25,8 +25,8 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
   if (side1 == zero || side2 == zero || side3 == zero) {
     return false;
   }
-  bool is_all_left = (side1 > 0 && side2 > 0 && side3 > 0);
-  bool is_all_right = (side1 < 0 && side2 < 0 && side3 < 0);
+  bool is_all_left = (side1 > zero && side2 > zero && side3 > zero);
+  bool is_all_right = (side1 < zero && side2 < zero && side3 < zero);
   if (is_all_left) {
     return true;
   }
